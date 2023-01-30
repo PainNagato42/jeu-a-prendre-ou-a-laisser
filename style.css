@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f1f1f1;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #111;
+}
+.gain {
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  padding: 12px;
+  margin-top: 20px;
+  cursor: default;
+}
+.box {
+  text-align: center;
+  font-size: 50px;
+  background-color: rgb(123, 182, 237);
+  padding: 12px;
+  cursor: pointer;
+}
+.box:not(.desactivate_box, .active, .active_echange):hover {
+  transform: scale(1.2);
+}
+#message {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+.active {
+  background-color: rgb(57, 177, 20);
+  cursor: default;
+}
+.active_echange {
+  background-color: orange;
+  cursor: default;
+}
+.desactivate_box {
+  background-color: rgba(154, 154, 154, 0.206);
+  color: rgba(17, 17, 17, 0.205);
+  cursor: default;
+}
+.desactivate_gain {
+  background-color: rgba(6, 6, 6, 0.453) !important;
+  box-shadow: 0px 5px rgba(6, 6, 6, 0.623) !important;
+}
+
+/*****************************/
+/*      MISE EN FORME       */
+/****************************/
+.container {
+  margin: 0 auto;
+  max-width: 1780px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex_column {
+  flex-direction: column;
+}
+.justify_center {
+  justify-content: center;
+}
+.align_center {
+  align-items: center;
+}
+.text_center {
+  text-align: center;
+}
+.justify_between {
+  justify-content: space-between;
+}
+.justify_around {
+  justify-content: space-around;
+}
+.display_none {
+  display: none;
+}
+/*******************************/
+/*             WIDTH          */
+/******************************/
+.large_40 {
+  width: 40%;
+}
+.large_25 {
+  width: 25%;
+}
+.large_20 {
+  width: 20%;
+}
+
+/********************************/
+/*      MARGIN / PADDING        */
+/*******************************/
+.margin_top_100 {
+  margin-top: 100px;
+}
+.margin_top_50 {
+  margin-top: 50px;
+}
+.margin_top_30 {
+  margin-top: 30px;
+}
+.margin_top_20 {
+  margin-top: 20px;
+}
+.margin_bottom_50 {
+  margin-bottom: 50px;
+}
+
+/*******************************/
+/*            COLOR           */
+/******************************/
+.red {
+  background-color: rgb(249, 76, 76);
+  box-shadow: 0px 5px rgb(218, 43, 43);
+}
+.orange {
+  background-color: rgb(218, 111, 3);
+  box-shadow: 0px 5px rgb(174, 91, 9);
+}
+.gold {
+  background-color: rgb(206, 176, 9);
+  box-shadow: 0px 5px rgb(172, 147, 5);
+}
+
+/******************************************/
+/*                 POPUP                 */
+/*****************************************/
+.popup,
+.popup_banquier,
+.popup_offre_accepter {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  width: 550px;
+  height: 350px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(123, 182, 237);
+  padding: 8px;
+  font-size: 73px;
+  z-index: 99;
+}
+.popup_banquier, .popup_offre_accepter {
+  background-color: rgb(206, 176, 9);
+}
+.popup_banquier h3 {
+  font-size: 50px;
+}
+.btn {
+  font-size: 35px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.btn_accepter_offre, .btn_accepter_echange, .rejouer {
+  background-color: rgb(42, 155, 42);
+}
+.btn_accepter_offre:hover, .btn_accepter_echange:hover, .rejouer:hover {
+  background-color: rgb(105, 224, 105);
+}
+.btn_refuser {
+  background-color: rgb(182, 70, 70);
+}
+.btn_refuser:hover {
+  background-color: rgb(223, 126, 126);
+}
+.absolute_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rejouer {
+  display: none;
+  font-size: 35px;
+}
+.text_box {
+  font-size: 40px;
+  margin-top: -85px;
+}
+#text_offre_accepter {
+  font-size: 45px;
+}
+.btn_plaisir {
+  font-size: 30px;
+  background-color: rgb(123, 182, 237);
+  margin-right: 30px;
+}
+.btn_plaisir:hover{
+  background-color: rgb(171, 209, 245);
+}
+.mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.451);
+  z-index: 98;
+}
+
+/*********************************************/
+/*              ANIMATION                   */
+/********************************************/
+.anim_top {
+  animation: top 1.8s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes top {
+  0% {
+    top: 50%;
+  }
+  100% {
+    top: -50%;
+  }
+}
+.anim_scale {
+  animation: scale 0.7s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes scale {
+  0% {
+    top: 30%;
+    left: 35%;
+    transform: scale(0);
+  }
+  100% {
+    top: 30%;
+    left: 35%;
+    transform: scale(1);
+  }
+}
